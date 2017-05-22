@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  display: block;
+  max-width: 60%;
+  margin-left: 15%;
+  margin-bottom: 5%;
+}
+
+
+  button{
+      width: 40vw;
+      height: 7vh;
+  }
+
+
+h1{
+  font-size: 100%;
+  text-align: center;
+  border: 0px solid #000000;
+  background: -moz-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+  border-radius: 22px 22px 22px 22px;
+  -moz-border-radius: 22px 22px 22px 22px;
+  -webkit-border-radius: 22px 22px 22px 22px;
+  -webkit-text-fill-color: blue;
+  -webkit-text-stroke: 1px black;
+}
+
+#main{
+  font-weight: bold;
+  font-style: italic;
+}
+
+#space
+{
+  margin-bottom: 5vh;
+  margin-left:30vw;
+  margin-right: 35vw;
+
+}
