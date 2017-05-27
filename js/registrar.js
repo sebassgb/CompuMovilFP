@@ -85,10 +85,6 @@ quitarPuntoCorreo: function(mcorreo){ // funcion encargada de remplazar los . de
     return resp;
 },
 
-colocarPuntoCorreo: function(mcorreo){ // funcion encargada de remplazar los . de los correos por espacios para poder ingresarlos en la raiz del nodo de la bd en firebase
-    return mcorreo.replaceAll(" ",".");
-},
-
 erroresCreacionUsuarios: function(error){ // metodo que identifica el error que sucede al crear el usuario y retorna un string o mensaje con el error que sucedio de una manera mas amigable para el usuario.
 var cuentaenuso="The email address is already in use by another account.";
 var contrasenacorta="Password should be at least 6 characters";
