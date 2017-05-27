@@ -8,34 +8,25 @@ var config = {
 };
 
 firebase.initializeApp(config);  // objeto para aceder a la bd
-showInfo("Silla_Danesa_Moderna", "id0");//Carga datos iniciales
+showTable();
 
 
-function showInfo(nombreSilla, id){//Traemos datos desde FireBase
-  if(id=="id1"){//Si seleccione del drop Menu eliminamos el child
-    var list = document.querySelector("#addImage");
-    list.removeChild(list.childNodes[1]);
-  }
-    var li=document.createElement('li');
-    li.innerHTML='<img src="../img/'+nombreSilla+'.png">';
-    document.querySelector("#addImage").appendChild(li);
+function showTable() {//Traemos datos desde firebase
     var database = firebase.database(); // objeto para hacer uso de la bd
-    var referencia = 'productos/'+nombreSilla;
+    var referencia = 'productos/';
     var bdEventos=database.ref(referencia);
 
     bdEventos.on('value', function(datos) {//Traemos de la BD los productos
+      var i=0, j=0;
       var datos =  datos.val();
-// capturamos los datos del formulario para registrar el usuario
-      document.querySelector("#titleProduct").innerHTML = nombreSilla;
-      document.querySelector("#refs").innerHTML = datos.categoria;
-      document.querySelector("#category").innerHTML = datos.descripcion;
-      document.querySelector("#price").innerHTML = datos.disponible;
-      document.querySelector("#available").innerHTML = datos.garantia;
-      document.querySelector("#weight").innerHTML = datos.marca;
-      document.querySelector("#brand").innerHTML = datos.peso;
-      document.querySelector("#garanty").innerHTML = datos.precio;
-      document.querySelector("#description").innerHTML = datos.referencia;
+     $.each(datos,function(indice,valor)//Recorremos el arbol obteniendo los datos
+     {
+        document.querySelector("#category"+i).innerHTML =valor.categoria;
+        document.querySelector("#price"+i).innerHTML =valor.precio;
+        document.querySelector("#available"+i).innerHTML =valor.disponible;
+         i++;
+     });
 },function(objetoError){
-        alert("error en la lectura "+objetoError.code);
+       alert("error en la lectura "+objetoError.code);
     });
 }

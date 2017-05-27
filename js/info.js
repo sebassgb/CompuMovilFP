@@ -40,14 +40,14 @@ iniciaFirebase: function() {
         var datos =  datos.val();
   // capturamos los datos del formulario para registrar el usuario
         document.querySelector("#titleProduct").innerHTML = nombreSilla;
-        document.querySelector("#refs").innerHTML = datos.categoria;
-        document.querySelector("#category").innerHTML = datos.descripcion;
-        document.querySelector("#price").innerHTML = datos.disponible;
-        document.querySelector("#available").innerHTML = datos.garantia;
-        document.querySelector("#weight").innerHTML = datos.marca;
-        document.querySelector("#brand").innerHTML = datos.peso;
-        document.querySelector("#garanty").innerHTML = datos.precio;
-        document.querySelector("#description").innerHTML = datos.referencia;
+        document.querySelector("#refs").innerHTML = datos.referencia;
+        document.querySelector("#category").innerHTML = datos.categoria;
+        document.querySelector("#price").innerHTML = datos.precio;
+        document.querySelector("#available").innerHTML = datos.disponible;
+        document.querySelector("#weight").innerHTML = datos.peso;
+        document.querySelector("#brand").innerHTML = datos.marca;
+        document.querySelector("#garanty").innerHTML = datos.garantia;
+        document.querySelector("#description").innerHTML = datos.descripcion;
   },function(objetoError){
           alert("error en la lectura "+objetoError.code);
       });
