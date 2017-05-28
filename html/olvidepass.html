@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="../css/registro.css" rel="stylesheet">
-
+    <link href="../css/olvidepass.css" rel="stylesheet">
+	  <script src="../js/firebase.js"></script>
   </head>
     <body>
       <div>
@@ -11,16 +11,17 @@
          <img src="../img/forgot.png">
         </center>
       </div>
-
+        <center>
           <form action="">
             <section >
-            <input type="email" placeholder="Correo">
+            <input type="email" id="correoPass" placeholder="Correo para Recuperación">
             </section>
         </form>
+      </center>
         <br>
         <div>
         <center>
-            <button type="button">Enviar</button><br>
+            <button onclick="app.recuperaPass()" type="button">Enviar</button><br>
             <a href="../index.html" target="_self">Volver Atrás</a>
         </center>
       </div>
