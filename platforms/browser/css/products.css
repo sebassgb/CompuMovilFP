@@ -1,0 +1,19 @@
+button{
+  width: 30vw;
+  height: 10vh;
+  margin-left:35%;
+  margin-right: 40%;
+  margin-bottom: 10%;
+  position: fixed;
+}
+
+h2{
+  text-align: center;
+  text-shadow: 2px;
+  color: blue;
+}
+
+#space
+{
+  margin-bottom: 5vh;
+}
