@@ -1,10 +1,10 @@
 input{
-  margin: 5%;
+  margin: 3.5%;
   font-size: 16px;
   border-radius: 5px;
   border-style: solid;
   border-color: black;
-  width: 50vw;
+  width: 55vw;
 }
 
 body{
@@ -17,9 +17,16 @@ body{
   margin-top: 5%;
 }
 
-.btn-success{
+.btn-success, .btn-warning{
   font-size: 16px;
+  margin-top: 3%;
   font-weight: bold;
   width: 30vw;
   height: 7vh;
+}
+
+img{
+  width: 30%;
+  height: auto;
+  margin-top: 3%;
 }

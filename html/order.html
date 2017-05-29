@@ -10,16 +10,21 @@
 	</head>
 	<body>
 		<div>
+			<center>
+				<img src="../img/ecommerce.png">
+			</center>
+		</div>
+		<div>
 		<center>
 	  <div class="dropdown">
 	 <button style="margin-bottom: 5px; font-weight:bold;" class="btn btn-basic dropdown-toggle" type="button" data-toggle="dropdown">Seleccione producto
 	 <span class="caret"></span></button>
 	 <ul style="margin-left:30%;" class="dropdown-menu">
-		 <li><a onclick="this.putInfo('Silla_Danesa_Moderna')">Silla_Danesa_Moderna</a></li>
-		 <li><a onclick="this.putInfo('Silla_Moderna_Louvre')">Silla_Moderna_Louvre</a></li>
-		 <li><a onclick="this.putInfo('Silla_Orange_New')">Silla_Orange_New</a></li>
-		 <li><a onclick="this.putInfo('Silla_Reclinable')">Silla_Reclinable</a></li>
-		 <li><a onclick="this.putInfo('Silla_Trono')">Silla_Trono</a></li>
+		 <li><a onclick="app.putInfo('Silla_Danesa_Moderna')">Silla_Danesa_Moderna</a></li>
+		 <li><a onclick="app.putInfo('Silla_Moderna_Louvre')">Silla_Moderna_Louvre</a></li>
+		 <li><a onclick="app.putInfo('Silla_Orange_New')">Silla_Orange_New</a></li>
+		 <li><a onclick="app.putInfo('Silla_Reclinable')">Silla_Reclinable</a></li>
+		 <li><a onclick="app.putInfo('Silla_Trono')">Silla_Trono</a></li>
 	 </ul>
 	</div>
 		<div>
@@ -43,7 +48,10 @@
 	</center>
 	 <div>
 		<center>
-	   <button type="button" onclick="makeOrder()" class="btn btn-success">Comprar</button>
+	   <button type="button" onclick="app.makeOrder()" class="btn btn-success">Comprar</button>
+		</center>
+		<center>
+	   <button type="button" onclick="location.href='lobby.html';" class="btn btn-warning">Volver</button>
 		</center>
 	</div>
 </div>

@@ -49,12 +49,12 @@ makeOrder: function(){
 			database.ref(referencia).push(ordenCreada);
       setTimeout(this.redirect, 2000);
       }
-    }
+    },
 
     redirect: function(){
     alert('Orden Generada con éxito');
     location.href="lobby.html";
-  }
+  },
 
 verificaDatos: function(){//Verificamos que todo este correcto
   if(document.querySelector("#nomProduct").value.length==0){
