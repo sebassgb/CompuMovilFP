@@ -4,6 +4,7 @@ input{
   border-radius: 5px;
   border-style: solid;
   border-color: black;
+  width: 50vw;
 }
 
 body{

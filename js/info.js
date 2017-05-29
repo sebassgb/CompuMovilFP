@@ -23,7 +23,7 @@ iniciaFirebase: function() {
   firebase.initializeApp(this.firebaseConfig);
 },
 
-  showInfo: function(nombreSilla, id) {//Traemos datos desde firebase
+  showInfo: function(nombreSilla) {//Traemos datos desde firebase
       var list = document.querySelector("#addImage");
       while (list.firstChild) {//Ciclo que elimina lo anterior
         list.removeChild(list.firstChild);
@@ -31,12 +31,10 @@ iniciaFirebase: function() {
       var li=document.createElement('li');
       li.innerHTML='<img src="../img/'+nombreSilla+'.png">';
       document.querySelector("#addImage").appendChild(li);
-      var database = firebase.database(); // objeto para hacer uso de la bd
       var referencia = 'productos/'+nombreSilla;
-      var bdEventos=database.ref(referencia);
+      var database = firebase.database().ref(referencia); // objeto para hacer uso de la bd
 
-
-      bdEventos.on('value', function(datos) {//Traemos de la BD los productos
+      database.on('value', function(datos) {//Traemos de la BD los productos
         var datos =  datos.val();
   // capturamos los datos del formulario para registrar el usuario
         document.querySelector("#titleProduct").innerHTML = nombreSilla;

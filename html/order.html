@@ -9,16 +9,17 @@
 	  <script src="../js/firebase.js"></script>
 	</head>
 	<body>
+		<div>
 		<center>
 	  <div class="dropdown">
 	 <button style="margin-bottom: 5px; font-weight:bold;" class="btn btn-basic dropdown-toggle" type="button" data-toggle="dropdown">Seleccione producto
 	 <span class="caret"></span></button>
 	 <ul style="margin-left:30%;" class="dropdown-menu">
-		 <li><a onclick="putInfo('Silla_Danesa_Moderna')">Silla_Danesa_Moderna</a></li>
-		 <li><a onclick="putInfo('Silla_Moderna_Louvre')">Silla_Moderna_Louvre</a></li>
-		 <li><a onclick="putInfo('Silla_Orange_New')">Silla_Orange_New</a></li>
-		 <li><a onclick="putInfo('Silla_Reclinable')">Silla_Reclinable</a></li>
-		 <li><a onclick="putInfo('Silla_Trono')">Silla_Trono</a></li>
+		 <li><a onclick="this.putInfo('Silla_Danesa_Moderna')">Silla_Danesa_Moderna</a></li>
+		 <li><a onclick="this.putInfo('Silla_Moderna_Louvre')">Silla_Moderna_Louvre</a></li>
+		 <li><a onclick="this.putInfo('Silla_Orange_New')">Silla_Orange_New</a></li>
+		 <li><a onclick="this.putInfo('Silla_Reclinable')">Silla_Reclinable</a></li>
+		 <li><a onclick="this.putInfo('Silla_Trono')">Silla_Trono</a></li>
 	 </ul>
 	</div>
 		<div>
@@ -31,13 +32,13 @@
 			<span>Teléfono</span><input type="text" id ="telfProduct" name="telfProducto" placeholder="Número teléfonico" required>
 		</div>
 		<div>
-			<span>Día preferencial</span><input type="text" id ="diaProduct" name="diaProducto" placeholder="Día Preferencial" required>
+			<span>Día preferido</span><input type="text" id ="diaProduct" name="diaProducto" placeholder="Día Preferencial" required>
 		</div>
 		<div>
 			<span>Correo</span><input type="email" id ="correoProduct" name="correoProducto" placeholder="Inserte Correo de contacto" required>
 		</div>
 		<div>
-			<span>Número de tarjeta</span><input type="text" id ="numtProduct" name="numtProducto" placeholder="Inserte Número" required>
+			<span>Núm de tarjeta</span><input type="text" id ="numtProduct" name="numtProducto" placeholder="Inserte Número" required>
 		</div>
 	</center>
 	 <div>
@@ -45,12 +46,12 @@
 	   <button type="button" onclick="makeOrder()" class="btn btn-success">Comprar</button>
 		</center>
 	</div>
+</div>
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script type="text/javascript" src="../jquery-1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/fastclick.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="../js/example.js"></script>
+		<script type="text/javascript" src="../js/order.js"></script>
 	</body>
-
-
 </html>
