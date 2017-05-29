@@ -1,42 +1,43 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
-	<link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/login.css" rel="stylesheet">
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
 
-</head>
-<body>
-<div>
-		<form action="">
-			<div>
-				<span><img id="logo" class="img-responsive" src="img/seguridad.png"></span>
-			</div>
-			<section class="user">
-				<span><img  src="img/user.png"></span><input type="text" placeholder="Usuario">
-			</section>
-			<section class="user">
-				<span><img  src="img/engine.png"></span><input type="text" placeholder="Contraseña">
-			</section>
-		</form>
-		<br>
-		<div>
-			<a href="html/lobby.html" target="_self">
-				<button type="button" class="btn btn-success btn-lg">Ingresar</button></div>
-            </a>
-		<br><div>
-			<a href="html/registro.html">Registrarse</a>
-		<a id="space" href="html/olvidepass.html">¿Has Olvidado Contraseña?</a></div>
-		</div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/fastclick.js"></script>
-</body>
+    http://www.apache.org/licenses/LICENSE-2.0
 
-
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
 </html>

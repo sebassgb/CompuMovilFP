@@ -1,0 +1,16 @@
+
+h2{
+  text-align: center;
+  text-shadow: 2px;
+  color: #135ccb;
+}
+
+#space
+{
+  margin-bottom: 5vh;
+  font-weight: bold;
+  width: 30vw;
+  height: 10vh;
+  max-width: 95px;
+  max-height: 45px;
+}
