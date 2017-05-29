@@ -45,13 +45,12 @@
     const promise=auth.signInWithEmailAndPassword(ucorreo,ucontra);
     promise.then(function(snapshot){
         location.href="html/lobby.html"; // lo redireccionamos a la parte de ingresar para que ingrese a la aplicacion
-    });
+      });
     // en caso de un error en el logeo
     promise.catch(function(error) {
        alert("Contraseña o Correo invalido");
-    });
-  }
-
+     });
+    }
   };
 
   if ('addEventListener' in document) {
