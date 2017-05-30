@@ -41,13 +41,13 @@
       });
     // en caso de un error en el logeo
     promise.catch(function(error) {
-      location.href="html/lobby.html"
+      alert("Usuario o Correo invalido");
      });
     }
   };
 
   if ('addEventListener' in document) {
-    document.addEventListener("deviceready", function() {
+    document.addEventListener("DOMContentLoaded", function() {
       app.inicio();
     }, false);
   }
