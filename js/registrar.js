@@ -13,7 +13,6 @@ var app = {
 inicio: function(){
   this.iniciaFastClick();
   this.iniciaFirebase();
-  this.iniciaBotones();
 },
 
 iniciaFastClick: function() {
@@ -22,11 +21,6 @@ iniciaFastClick: function() {
 
 iniciaFirebase: function() {
   firebase.initializeApp(this.firebaseConfig);
-},
-
-iniciaBotones: function() {
-  var form = document.querySelector('#formButton');
-  form.addEventListener('click' ,this.getDatos ,false);//Obtenemos los datos de los formularios
 },
 
   getDatos: function() {
