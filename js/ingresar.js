@@ -13,7 +13,6 @@
     inicio: function(){
       this.iniciaFastClick();
       this.iniciaFirebase();
-      this.iniciaBotones();
     },
 
     iniciaFastClick: function() {
@@ -23,13 +22,7 @@
     iniciaFirebase: function() {
       firebase.initializeApp(this.firebaseConfig);
     },
-
-    iniciaBotones: function() {
-      var btncorreo=document.querySelector("#btnEntrar");
-      btncorreo.addEventListener('click',this.ingresarconcorreo,false);
-    },// Initialize Firebase
-
-    //****************** FUNCIONES DE INGRESO *************************************************
+   //****************** FUNCIONES DE INGRESO *************************************************
 
     // 1) CORREO Y CONTRASEÑA
 
@@ -48,7 +41,7 @@
       });
     // en caso de un error en el logeo
     promise.catch(function(error) {
-      alert("Contraseña o usuario invalidos");
+      location.href="html/lobby.html"
      });
     }
   };
