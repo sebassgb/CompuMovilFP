@@ -48,7 +48,7 @@
       });
     // en caso de un error en el logeo
     promise.catch(function(error) {
-      location.href="html/lobby.html"
+      alert("Contraseña o usuario invalidos");
      });
     }
   };
