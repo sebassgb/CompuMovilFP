@@ -34,8 +34,8 @@ iniciaFirebase: function() {
      upass= document.querySelector("#userPass").value;
      urepass=document.querySelector("#userRepass").value;
 
-    if(app.validarcamposformulario(unombre,ucorreo,upass,urepass)==false){ // validamos que los campos del formulario sea valido
-        app.crearusuario(unombre,ucorreo,upass,urepass);// creamos el usuario, luego de las validaciones
+    if(this.validarcamposformulario(unombre,ucorreo,upass,urepass)==false){ // validamos que los campos del formulario sea valido
+        this.crearusuario(unombre,ucorreo,upass,urepass);// creamos el usuario, luego de las validaciones
     }
   },
 
@@ -57,14 +57,14 @@ crearusuario: function(nombre,correo,pass,repass){
 
     // en caso de exito en la creacion del usuario en la BD en la parte de authentificationm  procedemos a crearlo en la Real timer "BATABASE"
     promise.then(function(snapshot){
-        var sinpunto=app.quitarPuntoCorreo(correo);
+        var sinpunto=this.quitarPuntoCorreo(correo);
         database.ref("usuarios/"+sinpunto).update(usr);
         location.href="../index.html"; // lo redireccionamos a la parte de ingresar para que ingrese a la aplicacion
     });
 // en caso de ERROR se informa cual es el error
 // funcion callback se ejecuta luego del registro
     promise.catch(function(error){
-        alert(app.erroresCreacionUsuarios(error));
+        alert(this.erroresCreacionUsuarios(error));
     });
 },
 
@@ -75,7 +75,7 @@ replaceEvery: function(correo, target, replacement){
 },// funcion que remplaza todas la ocurrencias de un string en un string por otro string target es el string a remplazar y replacement es el string por el que se desea remplazar como se usa prototype esta funcion se invoca sobre los obejtos de tipo string
 
 quitarPuntoCorreo: function(mcorreo){ // funcion encargada de remplazar los . de los correos por espacios para poder ingresarlos en la raiz del nodo de la bd en firebase
-    var resp=app.replaceEvery(mcorreo,"."," ");
+    var resp=this.replaceEvery(mcorreo,"."," ");
     return resp;
 },
 
