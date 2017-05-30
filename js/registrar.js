@@ -3,11 +3,11 @@ var app = {
   // Initialize Firebase
   firebaseConfig: {
     apiKey: "AIzaSyAyG1HV1xPaQcszIDZwSZVk4uMpcDldEso",
-    authDomain: "tiendavirtual-81af8.firebaseapp.com",
-    databaseURL: "https://tiendavirtual-81af8.firebaseio.com",
-    projectId: "tiendavirtual-81af8",
-    storageBucket: "tiendavirtual-81af8.appspot.com",
-    messagingSenderId: "692746309618"
+        authDomain: "tiendavirtual-81af8.firebaseapp.com",
+        databaseURL: "https://tiendavirtual-81af8.firebaseio.com",
+        projectId: "tiendavirtual-81af8",
+        storageBucket: "tiendavirtual-81af8.appspot.com",
+        messagingSenderId: "692746309618"
   },
 
 inicio: function(){
